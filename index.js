@@ -7,7 +7,7 @@ const fi = (function() {
     each: function(collection, callback) {
       let arr;
       if(collection instanceof Array) {
-        arr = collection 
+        arr = collection
       } else {
         arr = Object.values(collection)
       }

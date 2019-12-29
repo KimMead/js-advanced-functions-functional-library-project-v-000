@@ -17,8 +17,18 @@ const fi = (function() {
       return collection
     },
 
-    map: function() {
-
+    map: function(collection, callback) {
+      let arr;
+      if(collection instanceof Array) {
+        arr = collection 
+      } else {
+        arr = Object.values(collection)
+      }
+      let newArr = []
+      arr.forEach(element => {
+        newArr.push(callback(element))
+      });
+      return newArr 
     },
 
     reduce: function() {

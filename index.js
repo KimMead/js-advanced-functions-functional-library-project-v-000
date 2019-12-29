@@ -20,7 +20,7 @@ const fi = (function() {
     map: function(collection, callback) {
       let arr;
       if(collection instanceof Array) {
-        arr = collection 
+        arr = collection
       } else {
         arr = Object.values(collection)
       }
@@ -28,7 +28,7 @@ const fi = (function() {
       arr.forEach(element => {
         newArr.push(callback(element))
       });
-      return newArr 
+      return newArr
     },
 
     reduce: function() {
